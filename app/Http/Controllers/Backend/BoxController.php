@@ -1,0 +1,97 @@
+<?php
+
+namespace App\Http\Controllers\Backend;
+
+use App\Http\Controllers\Controller;
+
+use Illuminate\Http\Request;
+use App\Models\Box; // Assuming Box is the model for the box data
+use App\Models\Type_coin; // Assuming Type_coin is the model for type coins
+use Illuminate\Support\Facades\Auth;
+
+
+class BoxController extends Controller
+{
+
+    public function index()
+    {
+       $box = Box::orderBy("created_at","desc")->paginate(10);
+        return view('backend.pages.box.index', compact('box'))->with([
+                'breadcrumbs' => [
+                    'title' => __('Cajas'),
+                ],
+            ]);
+    }
+
+    public function create()
+    {
+        // Logic to show the form for creating a new box
+        $type_coins = Type_coin::all();
+        return view('backend.pages.box.create', compact('type_coins'))->with([
+                'breadcrumbs' => [
+                    'title' => __('Crear Cajas'),
+                ],
+            ]);
+    }
+
+    public function store(Request $request)
+    {
+        //dd($request->all());
+        // Logic to store a new box
+        $data = $request->validate([
+            'name'         => 'required|string|max:255',
+            'amount'       => 'nullable|string|max:500',
+            'type_coin_id' => 'required|exists:type_coins,id',
+            'is_active'    => 'boolean',
+        ]);
+
+
+        $box = new Box();
+        $box ->name         = $data['name'];
+        $box ->amount       = $data['amount'];
+        $box ->type_coin_id = $data['type_coin_id'];
+        $box ->is_active    = $data['is_active'];
+        $box ->user_id      = Auth::user()->id;
+        $box->save();
+
+        return redirect()->route('admin.box.index')->with('success', 'Box created successfully.');
+    }
+   
+
+    public function edit($id){
+        // Logic to show the form for editing a specific box
+        $box = Box::findOrFail($id);
+        $type_coins = Type_coin::all();
+        return view('backend.pages.box.edit', compact('box', 'type_coins'))->with([
+                'breadcrumbs' => [
+                    'title' => __('Editar Cajas'),
+                ],
+            ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        // Logic to update a specific box
+        $box = Box::findOrFail($id);
+        $data = $request->validate([
+            'name'         => 'required|string|max:255',
+            'amount'       => 'nullable|string|max:500',
+            'type_coin_id' => 'required|exists:type_coins,id',
+            'is_active'    => 'boolean',
+        ]);
+
+        $box->update($data);
+
+        return redirect()->route('admin.box.index')->with('success', 'Box updated successfully.');
+    }
+
+    public function destroy($id)
+    {
+        // Logic to delete a specific box
+        $box = Box::findOrFail($id);
+        $box->delete();
+
+        return redirect()->route('admin.box.index')->with('success', 'Box deleted successfully.');
+    }
+
+}
