@@ -215,14 +215,53 @@ class RolesService
         // 3. Editor role - can manage content but not users/settings
         $editorPermissions = [
             'dashboard.view',
-            // Blog permissions
-            'blog.create',
-            'blog.view',
-            'blog.edit',
+            // Sales permissions
+            'sales.index',
+            'sales.create',
+            'sales.view',
+            'sales.edit',
+            'sales.delete',
             // Profile permissions
             'profile.view',
             'profile.edit',
             'profile.update',
+            // type coins permissions
+            'type-coins.index',
+            'type-coins.create',
+            'type-coins.view',
+            'type-coins.edit',
+            'type-coins.delete',
+            // Purchases permissions
+            'purchases.index',
+            'purchases.create',
+            'purchases.view',
+            'purchases.edit',
+            'purchases.delete',
+            // Inventories permissions
+            'inventories.index',
+            'inventories.create',
+            'inventories.view',
+            'inventories.edit',
+            'inventories.delete',
+            // Client permissions
+            'client.index',
+            'client.create',
+            'client.view',
+            'client.edit',
+            'client.delete',
+            // suppliers permissions
+            'suppliers.index',
+            'suppliers.create',
+            'suppliers.view',
+            'suppliers.edit',
+            'suppliers.delete', 
+            // Box permissions
+            'box.index',
+            'box.create',
+            'box.view',
+            'box.edit',
+            'box.delete',
+
             // Translations
             'translations.view',
         ];

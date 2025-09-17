@@ -25,13 +25,63 @@ class PermissionService
                 ],
             ],
             [
-                'group_name' => 'blog',
+                'group_name' => 'sales',
                 'permissions' => [
-                    'blog.create',
-                    'blog.view',
-                    'blog.edit',
-                    'blog.delete',
-                    'blog.approve',
+                    'sales.index',
+                    'sales.create',
+                    'sales.view',
+                    'sales.edit',
+                    'sales.delete',
+                ],
+            ],
+            [
+                'group_name' => 'box',
+                'permissions' => [
+                    'box.index',
+                    'box.create',
+                    'box.view',
+                    'box.edit',
+                    'box.delete',
+                ],
+            ],
+            [
+                'group_name' => 'client',
+                'permissions' => [
+                    'client.index',
+                    'client.create',
+                    'client.view',
+                    'client.edit',
+                    'client.delete',
+                ],
+            ],
+            [
+                'group_name' => 'purchases',
+                'permissions' => [
+                    'purchases.index',
+                    'purchases.create',
+                    'purchases.view',
+                    'purchases.edit',
+                    'purchases.delete',
+                ],
+            ],
+            [
+                'group_name' => 'suppliers',
+                'permissions' => [
+                    'suppliers.index',
+                    'suppliers.create',
+                    'suppliers.view',
+                    'suppliers.edit',
+                    'suppliers.delete',
+                ],
+            ],
+            [
+                'group_name' => 'type-coins',
+                'permissions' => [
+                    'type-coins.index',
+                    'type-coins.create',
+                    'type-coins.view',
+                    'type-coins.edit',
+                    'type-coins.delete',
                 ],
             ],
             [
@@ -48,6 +98,7 @@ class PermissionService
             [
                 'group_name' => 'role',
                 'permissions' => [
+                    'role.index',
                     'role.create',
                     'role.view',
                     'role.edit',
@@ -95,16 +146,13 @@ class PermissionService
                 ],
             ],
             [
-                'group_name' => 'post',
+                'group_name' => 'Inventories',
                 'permissions' => [
-                    'post.create',
-                    'post.view',
-                    'post.edit',
-                    'post.delete',
-                    'term.create',
-                    'term.view',
-                    'term.edit',
-                    'term.delete',
+                    'inventories.index',
+                    'inventories.create',
+                    'inventories.view',
+                    'inventories.edit',
+                    'inventories.delete',
                 ],
             ],
         ];
