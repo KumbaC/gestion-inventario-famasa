@@ -7,85 +7,26 @@
 [![Unlicense License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-<img width="100%" alt="Lara Dashboard" src="https://github.com/user-attachments/assets/c56009a4-718f-43dc-bd1e-caad5417b05b"  />
+<img width="100%" alt="Lara Dashboard" src="public/images/logo/1000236470.png" />
 
-**⚡ Lara Dashboard** CMS By Laravel (7.x - 12.x) - Manages Users, Roles, Permissions, Modules, Settings, Translations, Contents(Post, Page, Category, Tags), System logs, Monitoring and every actions of your Laravel application. A complete CMS solution for Laravel application with Tailwind CSS integrated with all starting features including modules, dark/lite mode, charts, tables, forms, lots of components and many more. By our preimium modules, you can get more features like CRM, HRM, Course Management and so on.
+**⚡ Sistema Gestor de Inventario** CMS desarrollado en Laravel (7.x - 12.x) — Administra Usuarios, Roles, Permisos, Módulos, Configuraciones, Traducciones, Control de inventario: (Ventas, Inventario, Proveedores, Usuarios, Cajas, Tipos de monedas), registros del sistema, monitoreo y todas las acciones de tu aplicación Laravel. Es una solución CMS completa para aplicaciones Laravel, integrada con Tailwind CSS y todas las funcionalidades iniciales: módulos, modo oscuro/luz, gráficos, tablas, formularios, numerosos componentes y mucho más. Con nuestros módulos premium puedes obtener funcionalidades adicionales como CRM, HRM, gestión de cursos, entre otros.
 
-**Demo:** https://demo.laradashboard.com/
+Este proyecto fue realizado para cumplir con una propuesta presentada a Inversiones Famasa C.A. y para completar los requisitos exigidos para optar al título de Licenciado en Computación en la Universidad del Zulia.
+
+**Usuario demostración:**
 ```
 Email - superadmin@example.com
 password - 12345678
 ```
 
-## 📋 Requirements:
+## 📋 Requerimientos:
 - Spatie role permission package  `^6.4`
 - PHPUnit test package `^11.x`
 - Tailwind CSS >= 4.x
 - Laravel Modules - https://laravelmodules.com/docs/12/getting-started/introduction
 - Laravel Events (A WordPress like action/filter hooks) - https://github.com/tormjens/eventy
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### 🛠️ Built With
-
-* [![PHP][PHP.com]][PHP-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Tailwind CSS][TailwindCSS.com]][TailwindCSS-url]
-* [![JavaScript][JavaScript.com]][JavaScript-url]
-* [![Alpine JS][AlpineJS.com]][AlpineJS-url]
-* [![React][React.js]][React-url]
-* [![MySQL][MySQL.com]][MySQL-url]
-* <a href="https://penguinui.com/">
-    <img src="https://res.cloudinary.com/ds8pgw1pf/image/upload/v1721401292/penguinui/main-assets/Logo.png" alt="Penguin UI" style="height: 30px;">
-   </a>
-* <a href="https://tailadmin.com" style="display: flex; align-items: center; text-decoration: none; color: #3d51e0;">
-    <img src="https://avatars.githubusercontent.com/u/95587422?v=4" alt="Tail Admin" style="height: 20px;"> <span style="color:#3d51e0; margin-left: 5px;">Tail Admin</span>
-   </a>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 📝 Changelog
-**[v1.5.0] - 2025-06-01**
-- **Feature**: Content Management System (CMS) with Content(Post/Page), Content Category, Content Tag management.
-- **Feature**: Post/Page activity chart in Dashboard.
-- **Feature**: Bulk delete for Users, Roles, Posts, Categories, Tags.
-- **Enhancement**: Sorting features for Users, Roles, Permissions, Posts, Categories, Tags.
-- **Enhancement**: Components - Confirm delete, Success/Error messages, Toast, Text Editor, Breadcrumbs, Action dropdown.
-- **Fix**: System dark mode issues.
-- **Fix**: Modules refactorring in demo mode.
-
-**[v1.3.0] - 2025-05-18**
-- **Feature**: Admin Menu architecture with more extendible way.
-- **Feature**: Permission List and detail page.
-- **Enhancement**: Improved module compatibility.
-
-**[v1.2.0] - 2025-05-12**
-- **Feature - Translation Management**: Added Translation management sytem with supporting 21 languages by default and possibility to add any in a second.
-- **Enhancement - Dashboard Redesign**: Dashboard redesigned with new card, user history chart, several more design improvements.
-- **Enhancement**: Role list page, user list page to add links of users list sorting by role and role edit page linkings.
-- **Enhancement**: Cleanup code base to use services, requests more, use SOLID whenever needed.
-- **Fix**: Fixed #109 Submenu dropdown icon doesn't change on open/close submenu of a menu item.
-- **Fix**: Fixed #105 Sidebar Icon not working good if collapsed.
-- **Fix**: Fixed #93 Theme primary color, secondary color was not working.
-- **Fix**: Fixed #99 Superadmin role shouldn't be edited.
-- **Fix**: Fixed Mobile responsive has some issues.
-- **Fix**: Fixed Sidebar toggle was not persistent issue.
-- **Fix**: Fixed Role create -> selecting permission group can't check the permissions in that group checkboxes automatically.
-
-**[v1.0.0] - 2025-04-21**
-- **Feature - Forget Password Management**: Enhanced the forget password functionality for better reliability and user experience.
-- **Feature - Settings Management**: Added comprehensive settings management features, including API support.
-- **Enhancement - Role-Based Access Control (RBAC) Improvements**: Improved authorization mechanisms and role-based access control.
-- **Feature - Admin Impersonation**: Administrators can now log in as other users and switch back to their original accounts seamlessly.
-- **Enhancement - UI/UX Enhancements**: Updated the role create/edit form for a more intuitive and user-friendly experience.
-- **Enhancement - User Profile and Management Enhancements**: Refactored user-related operations to utilize `UserService` and `RolesService` for better separation of concerns and maintainability.
-- **Docs - Documentation and Configuration Updates**:
-  - Updated `.env.example` to include a `GITHUB_LINK` variable for improved project visibility.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🔄 Versions:
-Latest version `v1.5.0` - https://github.com/ManiruzzamanAkash/laravel-role/releases/tag/v1.5.0
 
 <details>
 <summary>View Old versions</summary>
@@ -120,368 +61,68 @@ More release tags - https://github.com/laradashboard/laradashboard/releases
 </details>
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
-## 🚀 Project Setup
-**Clone and Go Project**
+## 🚀 Configuración del Proyecto
+**Clonar y ejecutar el proyecto**
 ```console
 git clone git@github.com:laradashboard/laradashboard.git
 cd laradashboard
 ```
 
-**Install Composer & Node Dependencies**
+**Instalar dependencias de Composer y Node**
 ```console
 composer install
 npm install
 ```
 
-**Database & env creation**
-- Create database called - `laradashboard`
-- Create `.env` file by copying `.env.example` file
+**Base de datos y creación de archivo env**
+- Crea una base de datos llamada `laradashboard`
+- Crea el archivo `.env` copiando el archivo `.env.example`
 
-**Generate Artisan Key or necessary linkings**
+**Generar clave de Artisan y enlaces necesarios**
 ```console
 php artisan key:generate
 php artisan storage:link
 ```
 
-**Migrate Database with seeder**
+**Migrar la base de datos con seeders**
 ```console
 php artisan migrate:fresh --seed && php artisan module:seed
 ```
 
-**Run Project**
+**Ejecutar el proyecto**
 ```php
 php artisan serve
 npm run dev
 ```
 
-So, You've got the project of Lara Dashboard on your local machine - http://localhost:8000
+¡Listo! Ahora esta desplegado el proyecto en tu local - http://localhost:8000
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🔄 Previously From laravel-role
-We were previously at https://github.com/ManiruzzamanAkash/laravel-role, so you need to change the URL if you moved from there
-```console
-git remote set-url origin git@github.com:laradashboard/laradashboard.git
-```
+## ⚙️ Cómo funciona
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## ⚙️ How it works
-1. Login using Super Admin Credential -
-    1. Email - `superadmin@example.com`
-    1. Password - `12345678`
-1. Forget password - Password forget and reset will work if email is set up properly
-1. Create User
-1. Create Role
-1. Assign Permission to Roles
-1. Assign Multiple Role to an User
-1. Check by login with the new credentials.
-1. If you've not enough permission to do any task, you'll get a warning message.
-1. Dashboard with Beautiful chart integrated
-1. Module Based Development - Custom Module Add/Enable/Disable/Delete
-1. Monitoring - Logging of every action of your application
-1. Monitoring - Laravel Pulse
-1. Translation Management - Add/Edit/Delete Language, Add/Edit/Delete Translation
-1. Settings - General, Site Appearance, Content, Integration settings
-1. Admin Menu - Add/Edit/Delete Menu, Submenu, Link
-1. Admin Impersonation - Login as another user and switch back to your original account
-1. Custom Error Pages - 404, 500, 503, 403
-1. Content Management System - Add/Edit/Delete Content, Content Category, Content Tag
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 📧 Email setup
-You can use mailtrap to test emails easily - https://mailtrap.io/ (first need to create mailtrap account and can )
-
-```bash
-MAIL_MAILER=smtp
-MAIL_HOST=sandbox.smtp.mailtrap.io
-MAIL_PORT=587
-MAIL_USERNAME=mailtrap-username
-MAIL_PASSWORD=mailtrap-password
-MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS=youremail@example.com
-MAIL_FROM_NAME="${APP_NAME}"
-```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 📚 Documentation
-https://laradashboard.com/docs/
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 📸 Screenshots
-
-### 🔐 Login & Authentication
-<table>
-  <tr>
-    <td width="50%">
-      <strong>Login Page</strong><br/>
-      <img width="100%" alt="Login Page" src="/demo-screenshots/00-Login-Page-Lite-Mode.png"/>
-    </td>
-    <td width="50%">
-      <strong>Forget Password Page (Dark Mode)</strong><br/>
-      <img width="100%" alt="Forget Password Page" src="/demo-screenshots/01-Forget-password.png"/>
-    </td>
-  </tr>
-</table>
-
-### 📊 Dashboard
-<table>
-  <tr>
-    <td width="50%">
-      <strong>Dashboard (Light Mode)</strong><br/>
-      <img width="100%" alt="Dashboard Light Mode" src="/demo-screenshots/03-Dashboard-Page-lite-Mode.png"/>
-    </td>
-    <td width="50%">
-      <strong>Dashboard (Dark Mode)</strong><br/>
-      <img width="100%" alt="Dashboard Dark Mode" src="/demo-screenshots/04-Dashboard-Page-Dark-Mode.png"/>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <strong>Dashboard Collapsed Sidebar</strong><br/>
-      <img width="100%" alt="Dashboard Collapsed Sidebar" src="/demo-screenshots/04_1-Dashboard-Collapsed-Sidebar.png"/>
-    </td>
-  </tr>
-</table>
-
-### 🔑 Role Management
-<table>
-  <tr>
-    <td width="50%">
-      <strong>Role List (Light Mode)</strong><br/>
-      <img width="100%" alt="Role List" src="/demo-screenshots/05-Role-List-Lite.png"/>
-    </td>
-    <td width="50%">
-      <strong>Role List (Dark Mode)</strong><br/>
-      <img width="100%" alt="Role List Dark" src="/demo-screenshots/06-Role-List-Dark.png"/>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <strong>Role Create</strong><br/>
-      <img width="100%" alt="Role Create" src="/demo-screenshots/07-Role-Create.png"/>
-    </td>
-    <td width="50%">
-      <strong>Role Edit</strong><br/>
-      <img width="100%" alt="Role Edit" src="/demo-screenshots/08-Role-Edit.png"/>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <strong>Permission List</strong><br/>
-      <img width="100%" alt="Permission List" src="/demo-screenshots/09-Permissions-List-Lite-Mode.png"/>
-    </td>
-  </tr>
-</table>
-
-### 👥 User Management
-<table>
-  <tr>
-    <td width="50%">
-      <strong>Users List (Light mode)</strong><br/>
-      <img width="100%" alt="Users List (Light mode)" src="/demo-screenshots/10-User-List-Lite-Mode.png"/>
-    </td>
-    <td width="50%">
-      <strong>Users List (Dark mode)</strong><br/>
-      <img width="100%" alt="Users List (Dark mode)" src="/demo-screenshots/11-User-List-Dark-Mode.png" />
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <strong>User Create</strong><br/>
-      <img width="100%" alt="User Create" src="/demo-screenshots/12-User-Create-Lite-Mode.png"/>
-    </td>
-    <td width="50%">
-      <strong>User Delete</strong><br/>
-      <img width="100%" alt="User Delete" src="/demo-screenshots/13-User-Delete-Lite-Mode.png" />
-    </td>
-  </tr>
-</table>
-
-### 📝 Content Management - CMS
-<table>
-  <tr>
-    <td width="50%">
-      <strong>Posts List</strong><br/>
-      <img width="100%" alt="Users List (Light mode)" src="/demo-screenshots/31-Post-List-Lite-Mode.png"/>
-    </td>
-    <td width="50%">
-      <strong>Post Create</strong><br/>
-      <img width="100%" alt="Users List (Dark mode)" src="/demo-screenshots/30-Post-List-Dark-Mode.png" />
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <strong>Pages List</strong><br/>
-      <img width="100%" alt="Users List (Light mode)" src="/demo-screenshots/38-Pages-List-Lite-Mode.png"/>
-    </td>
-    <td width="50%">
-      <strong>Page Delete</strong><br/>
-      <img width="100%" alt="Users List (Dark mode)" src="/demo-screenshots/39-Pages-Edit-Dark-Mode.png" />
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <strong>Category List & Create</strong><br/>
-      <img width="100%" alt="Category List & Create" src="/demo-screenshots/34-Category-List-Lite-Mode.png"/>
-    </td>
-    <td width="50%">
-      <strong>Category Edit</strong><br/>
-      <img width="100%" alt="Category Edit" src="/demo-screenshots/35-Category-Edit-Dark-Mode.png" />
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <strong>Tag List & Create</strong><br/>
-      <img width="100%" alt="Tag Create" src="/demo-screenshots/36-Tags-List-Lite-Mode.png"/>
-    </td>
-    <td width="50%">
-      <strong>Tag Edit</strong><br/>
-      <img width="100%" alt="Tag Delete" src="/demo-screenshots/37-Tags-Edit-Dark-Mode.png" />
-    </td>
-  </tr>
-</table>
-
-### 🧩 Module Management
-<table>
-  <tr>
-    <td width="50%">
-      <strong>Module List</strong><br/>
-      <img width="100%" alt="Module List" src="/demo-screenshots/14-Module-List.png"/>
-    </td>
-    <td width="50%">
-      <strong>Upload Module</strong><br/>
-      <img width="100%" alt="Upload Module" src="/demo-screenshots/15-Module-Upload.png"/>
-    </td>
-  </tr>
-</table>
-
-### ⚙️ Settings Pages
-<table>
-  <tr>
-    <td width="50%">
-      <strong>General Settings</strong><br/>
-      <img width="100%" alt="General Settings" src="/demo-screenshots/40-Settings-General.png"/>
-    </td>
-    <td width="50%">
-      <strong>Site Appearance</strong><br/>
-      <img width="100%" alt="Site Appearance" src="/demo-screenshots/41-Settings-Site-Appearance-Dark-Mode.png"/>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <strong>Content Settings</strong><br/>
-      <img width="100%" alt="Content Settings" src="/demo-screenshots/42-Settings-Content.png"/>
-    </td>
-    <td width="50%">
-      <strong>Integration Settings</strong><br/>
-      <img width="100%" alt="Integration Settings" src="/demo-screenshots/43-Settings-Integration.png"/>
-    </td>
-  </tr>
-</table>
-
-### 🌐 Translations Pages
-<table>
-  <tr>
-    <td width="50%">
-      <strong>Translations List</strong><br/>
-      <img width="100%" alt="Translations List" src="/demo-screenshots/50-Translation-List-Lite-Mode.png" />
-    </td>
-    <td width="50%">
-      <strong>Add Language</strong><br/>
-      <img width="100%" alt="Create Translation" src="/demo-screenshots/51-Translation-Create-Dark-Mode.png" />
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <strong>Language Switcher</strong><br/>
-      <img width="100%" alt="Language Switcher" src="/demo-screenshots/90-Language-Switcher.png" />
-    </td>
-    <td width="50%">
-      <!-- Reserved for future screenshot -->
-    </td>
-  </tr>
-</table>
-
-### 📊 Monitoring
-<table>
-  <tr>
-    <td width="50%">
-      <strong>Action Logs</strong><br/>
-      <img width="100%" alt="Action Logs" src="/demo-screenshots/20-Action-Log-List.png"/>
-    </td>
-    <td width="50%">
-      <strong>Laravel Pulse</strong><br/>
-      <img width="100%" alt="Laravel Pulse" src="/demo-screenshots/91-Laravel-Pulse-Dashboard-for-Monitoring.png"/>
-    </td>
-  </tr>
-</table>
-
-### 🔧 Other Pages / Sections
-<table>
-  <tr>
-    <td width="50%">
-      <strong>Custom Error Pages</strong><br/>
-      <img width="100%" alt="Custom Error Pages" src="/demo-screenshots/100-Custom-Error-Pages.png"/>
-    </td>
-    <td width="50%">
-      <strong>Post activity Chart</strong><br/>
-      <img width="100%" alt="Post activity Chart" src="/demo-screenshots/102-Post-activity-Chart.png"/>
-    </td>
-  </tr>
-</table>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🔗 Live Demo
-https://demo.laradashboard.com
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## ✨ Premium Features
-Please visit at Lara Dashboard to get more premium moduels - https://laradashboard.com. Premium modules included CRM, HRM, Course Managements and so on.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🧩 Core modules
-- **User Avatar** - https://github.com/laradashboard/UserAvatar - A very simple module create an avatar for a user. Handle migration, entries/updates in user forms and so on.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 👥 Contributing
-
-Want to contribute? Fork the project, make your changes, and submit a pull request. Even small improvements to documentation are appreciated!
-
-Please be sure to read our [Contribution Guide](CONTRIBUTING.md) before submitting your PR.
-
-### 🌟 Top contributors:
-<a href="https://github.com/laradashboard/laradashboard/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=laradashboard/laradashboard" alt="contrib.rocks image" />
-</a>
-
-## 💖 Support
-If you like my work you may consider buying me a ☕ / 🍕
-
-<a href="https://www.patreon.com/maniruzzaman" target="_blank" title="Buy Me A Coffee">
-    Go to Patreon
-</a>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 📞 Connect
-
-- Join Facebook Community (For any questions, latest updates) - https://www.facebook.com/groups/laradashboard
-- Linkedin Community - https://www.linkedin.com/groups/14690156
-- Youtube channel (For tutorials) - https://www.youtube.com/@laradashboard
-- Maniruzzaman Akash - [@LinkedIn](https://www.linkedin.com/in/maniruzzamanakash) | manirujjamanakash@gmail.com
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+1. Inicia sesión usando las credenciales de Super Admin:
+  1. Email: `superadmin@example.com`
+  1. Contraseña: `12345678`
+1. Olvidé mi contraseña: la función de recuperación y restablecimiento de contraseña funcionará si el correo está configurado correctamente.
+1. Crear usuario
+1. Crear rol
+1. Asignar permisos a los roles
+1. Asignar múltiples roles a un usuario
+1. Verifica iniciando sesión con las nuevas credenciales.
+1. Si no tienes suficientes permisos para realizar alguna acción, recibirás un mensaje de advertencia.
+1. Panel de control con gráficos atractivos integrados
+1. Desarrollo basado en módulos: agregar/habilitar/deshabilitar/eliminar módulos personalizados
+1. Monitoreo: registro de cada acción de tu aplicación
+1. Monitoreo: Laravel Pulse
+1. Gestión de traducciones: agregar/editar/eliminar idiomas y traducciones
+1. Configuración: ajustes generales, apariencia del sitio, contenido, integración
+1. Menú de administración: agregar/editar/eliminar menú, submenú, enlaces
+1. Suplantación de administrador: iniciar sesión como otro usuario y volver a tu cuenta original
+1. Páginas de error personalizadas: 404, 500, 503, 403
+1. Sistema de gestión de contenidos: agregar/editar/eliminar contenido, categorías y etiquetas
 
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
