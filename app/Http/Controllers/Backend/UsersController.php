@@ -85,7 +85,7 @@ class UsersController extends Controller
 
         $this->storeActionLog(ActionType::CREATED, ['user' => $user]);
 
-        session()->flash('success', __('User has been created.'));
+        session()->flash('success', __('Usuario creado correctamente.'));
 
         ld_do_action('user_store_after', $user);
 
@@ -146,7 +146,7 @@ class UsersController extends Controller
 
         $this->storeActionLog(ActionType::UPDATED, ['user' => $user]);
 
-        session()->flash('success', __('User has been updated.'));
+        session()->flash('success', __('Usuario actualizado correctamente.'));
 
         return back();
     }
@@ -172,7 +172,7 @@ class UsersController extends Controller
         $user = ld_apply_filters('user_delete_before', $user);
         $user->delete();
         $user = ld_apply_filters('user_delete_after', $user);
-        session()->flash('success', __('User has been deleted.'));
+        session()->flash('success', __('Usuario eliminado correctamente.'));
 
         $this->storeActionLog(ActionType::DELETED, ['user' => $user]);
 
@@ -192,7 +192,7 @@ class UsersController extends Controller
         
         if (empty($ids)) {
             return redirect()->route('admin.users.index')
-                ->with('error', __('No users selected for deletion'));
+                ->with('error', __('Usuarios no seleccionados para eliminar.'));
         }
         
         $users = User::whereIn('id', $ids)->get();
@@ -215,9 +215,9 @@ class UsersController extends Controller
         }
         
         if ($deletedCount > 0) {
-            session()->flash('success', __(':count users deleted successfully', ['count' => $deletedCount]));
+            session()->flash('success', __(':count usuarios eliminados correctamente.', ['count' => $deletedCount]));
         } else {
-            session()->flash('error', __('No users were deleted. Selected users may include protected accounts.'));
+            session()->flash('error', __('No se eliminaron usuarios. Los usuarios seleccionados pueden incluir cuentas protegidas.'));
         }
         
         return redirect()->route('admin.users.index');

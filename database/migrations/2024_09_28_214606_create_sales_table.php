@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('amount_foreign_currency')->nullable();  //MONTO MONEDA EXTRANJERA
             $table->string('exchange_rate')->nullable(); //TASA DE CAMBIO
             $table->string('amount_total'); // M0NTO TOTAL DE LA VENTA
+            $table->string('return_change')->nullable(); // VUELTO
             $table->unsignedBigInteger('box_id');
             $table->unsignedBigInteger('client_id');
             $table->foreignId('type_coin_id')->default(1)->references('id')->on('type_coins'); // TIPO DE MONEDA DE LA TRANSFERENCIA

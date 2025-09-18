@@ -21,7 +21,7 @@ class UserLoginAsController extends Controller
         Session::put('original_user_id', auth()->id());
         Auth::login($user);
 
-        session()->flash('success', __('You are now logged in as :name.', ['name' => $user->name]));
+        session()->flash('success', __('Ahora has iniciado sesión como :name.', ['name' => $user->name]));
 
         return redirect()->route('admin.dashboard');
     }
@@ -31,7 +31,7 @@ class UserLoginAsController extends Controller
         $originalUserId = session()->pull('original_user_id');
         if ($originalUserId) {
             Auth::loginUsingId($originalUserId);
-            session()->flash('success', __('Switched back to the original user.'));
+            session()->flash('success', __('Has vuelto a iniciar sesión como :name.', ['name' => Auth::user()->name]));
         }
 
         return redirect()->route('admin.dashboard');

@@ -23,7 +23,7 @@ class TypeCoinController extends Controller
         // Logic to show the form for creating a new type coin
         return view('backend.pages.typecoins.create')->with([
             'breadcrumbs' => [
-                'title' => __('Crear Type Coin'),
+                'title' => __('Crear Tipo de moneda'),
             ],
         ]);
     }
@@ -42,7 +42,7 @@ class TypeCoinController extends Controller
         // Assuming TypeCoin is a model that handles the type coin data
         TypeCoin::create($data);
 
-        return redirect()->route('admin.type-coins.index')->with('success', 'Type coin created successfully.');
+        return redirect()->route('admin.type-coins.index')->with('success', 'Tipo de moneda creada correctamente.');
     }
 
     public function edit($id){
@@ -65,7 +65,7 @@ class TypeCoinController extends Controller
         // Logic to update a specific type coin
         $typeCoin = TypeCoin::findOrFail($id);
         $typeCoin->update($data);
-        return redirect()->route('admin.type-coins.index')->with('success', 'Type coin updated successfully.');
+        return redirect()->route('admin.type-coins.index')->with('success', 'Tipo de moneda actualizada correctamente.');
     }
 
     public function destroy($id)

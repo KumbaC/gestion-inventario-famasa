@@ -161,8 +161,8 @@
                                         </div>
                                         @if ($role->permissions->count() > 7)
                                             <button @click="showAll = !showAll" class="text-primary text-sm mt-2">
-                                                <span x-show="!showAll">+{{ $role->permissions->count() - 7 }} {{ __('more') }}</span>
-                                                <span x-show="showAll">{{ __('Show less') }}</span>
+                                                <span x-show="!showAll">+{{ $role->permissions->count() - 7 }} {{ __('Más') }}</span>
+                                                <span x-show="showAll">{{ __('Mostrar menos') }}</span>
                                             </button>
                                         @endif
                                     </div>
@@ -173,7 +173,7 @@
                                             <x-buttons.action-item 
                                                 :href="route('admin.roles.edit', $role->id)" 
                                                 icon="pencil" 
-                                                :label="__('Edit')" 
+                                                :label="__('Editar')" 
                                             />
                                         @endif
 
@@ -183,19 +183,19 @@
                                                     type="modal-trigger"
                                                     modal-target="deleteModalOpen"
                                                     icon="trash" 
-                                                    :label="__('Delete')" 
+                                                    :label="__('Eliminar')" 
                                                     class="text-red-600 dark:text-red-400"
                                                 />
                                                 
                                                 <x-modals.confirm-delete
                                                     id="delete-modal-{{ $role->id }}"
-                                                    title="{{ __('Delete Role') }}"
-                                                    content="{{ __('Are you sure you want to delete this role?') }}"
+                                                    title="{{ __('Eliminar Rol') }}"
+                                                    content="{{ __('¿Estás seguro de que deseas eliminar este rol?') }}"
                                                     formId="delete-form-{{ $role->id }}"
                                                     formAction="{{ route('admin.roles.destroy', $role->id) }}"
                                                     modalTrigger="deleteModalOpen"
-                                                    cancelButtonText="{{ __('No, cancel') }}"
-                                                    confirmButtonText="{{ __('Yes, Confirm') }}"
+                                                    cancelButtonText="{{ __('No, cancelar') }}"
+                                                    confirmButtonText="{{ __('Sí, Confirmar') }}"
                                                 />
                                             </div>
                                         @endif
@@ -203,7 +203,7 @@
                                         <x-buttons.action-item 
                                             :href="route('admin.users.index', ['role' => $role->name])" 
                                             icon="people" 
-                                            :label="__('View Users')" 
+                                            :label="__('Ver Usuarios')" 
                                         />
                                     </x-buttons.action-buttons>
                                 </td>
@@ -211,7 +211,7 @@
                         @empty
                             <tr class="border-b border-gray-100 dark:border-gray-800">
                                 <td colspan="5" class="px-5 py-4 sm:px-6 text-center">
-                                    <span class="text-gray-500 dark:text-gray-400">{{ __('No roles found') }}</span>
+                                    <span class="text-gray-500 dark:text-gray-400">{{ __('No se encontraron roles') }}</span>
                                 </td>
                             </tr>
                         @endforelse

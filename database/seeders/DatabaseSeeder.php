@@ -25,7 +25,6 @@ class DatabaseSeeder extends Seeder
             TypeCoinSeeder::class,
             BoxSeeder::class,
             SettingsSeeder::class,
-            ContentSeeder::class,
         ]);
 
     }

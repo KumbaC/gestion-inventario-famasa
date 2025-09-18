@@ -17,14 +17,14 @@
             <div class="rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-800 dark:bg-gray-900">
                 <div class="px-6 py-4 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center">
                     <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
-                        {{ __('Role Details') }}
+                        {{ __('Detalles del Rol') }}
                     </h3>
                     <div class="flex gap-4">
                         <button type="submit" class="btn-primary">
-                            {{ __('Save') }}
+                            {{ __('Guardar') }}
                         </button>
                         <a href="{{ route('admin.roles.index') }}" class="btn-default">
-                            {{ __('Cancel') }}
+                            {{ __('Cancelar') }}
                         </a>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-400">
-                                {{ __('Role Name') }}
+                                {{ __('Nombre del Rol') }}
                             </label>
                             <input required autofocus name="name" value="{{ old('name') }}" type="text" placeholder="{{ __('Enter a Role Name') }}" class="mt-2 form-control">
                         </div>
@@ -44,14 +44,14 @@
             <div class="rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-800 dark:bg-gray-900">
                 <div class="px-6 py-4 border-b border-gray-100 dark:border-gray-800">
                     <h3 class="text-lg font-semibold text-gray-800 dark:text-white">
-                        {{ __('Permissions') }}
+                        {{ __('Permisos') }}
                     </h3>
                 </div>
                 <div class="p-4">
                     <div class="mb-4">
                         <input type="checkbox" id="checkPermissionAll" class="mr-2">
                         <label for="checkPermissionAll" class="text-sm text-gray-700 dark:text-gray-400">
-                            {{ __('Select All') }}
+                            {{ __('Seleccionar Todo') }}
                         </label>
                     </div>
                     <hr class="mb-6">
@@ -86,10 +86,10 @@
             <!-- Action Buttons -->
             <div class="flex justify-start gap-4">
                 <button type="submit" class="btn-primary">
-                    {{ __('Save') }}
+                    {{ __('Guardar') }}
                 </button>
                 <a href="{{ route('admin.roles.index') }}" class="btn-default">
-                    {{ __('Cancel') }}
+                    {{ __('Cancelar') }}
                 </a>
             </div>
         </div>

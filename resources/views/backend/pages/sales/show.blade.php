@@ -18,7 +18,8 @@
                                 <h3 class="text-lg font-semibold text-gray-800 dark:text-white/90">{{ __('Detalles de la Venta') }}</h3>
                                 <p class="text-sm text-gray-600 dark:text-gray-400">{{ __('ID de la venta: ') . $sale->id }}</p>
                                 <p class="text-sm text-gray-600 dark:text-gray-400">{{ __('Fecha de la venta: ') . $sale->created_at->format('d M Y') }}</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400">{{ __('Total: ') . $sale->amount }} {{ $sale->typeCoin->symbol }}</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">{{ __('Total Pagado: ') . $sale->amount }} {{ $sale->typeCoin->symbol }}</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">{{ __('Vuelto al cliente: ') . $sale->return_change }} {{ $sale->typeCoin->symbol }}</p>
                             
                             </div>
                             <div class="card">

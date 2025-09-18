@@ -47,12 +47,13 @@ class InventoryController extends Controller
         ]);
 
         $data = [
-            'name' => $request->input('name'),
-            'stock' => $request->input('stock'),
-            'code' => $request->input('code'),
+            'name'         => $request->input('name'),
+            'stock'        => $request->input('stock'),
+            'code'         => $request->input('code'),
             'type_coin_id' => 1, // Assuming typeCoin is the ID of the type coin
-            'amount' => $request->input('amount'),
-            'amount_total' => $request->input('amount_total') // Calculate total amount
+            'amount'       => $request->input('amount'),
+            'amount_total' => $request->input('amount_total'), // Calculate total amount
+            'supplier_id'  => $request->input('supplier') // Assuming supplier_id is passed in the request
         ];  
 
 

@@ -205,7 +205,7 @@ class AdminMenuService
             'priority' => 40,
             'route' => route('admin.inventories.index'),
             'active' => Route::is('admin.inventories.index'),
-            //'permissions' => ['pulse.view', 'actionlog.view'],
+            'permissions' => ['inventories.view', 'inventories.edit', 'inventories.create', 'inventories.delete', 'inventories.index'],
            /*  'children' => [
                 [
                     'label' => __('Inventario'),
@@ -225,7 +225,7 @@ class AdminMenuService
             'priority' => 40,
             'route' => route('admin.sales.index'),
             'active' => Route::is('admin.sales.index'),
-            //'permissions' => ['pulse.view', 'actionlog.view'],
+            'permissions' => ['sales.view', 'sales.edit', 'sales.create', 'sales.delete', 'sales.index'],
            /*  'children' => [
                 [
                     'label' => __('Inventario'),
@@ -243,7 +243,7 @@ class AdminMenuService
             'id' => 'cajas-submenu',
             'active' => Route::is('admin.box.*'),
             'priority' => 40,
-            //'permissions' => ['pulse.view', 'actionlog.view'],
+            'permissions' => ['box.view', 'box.edit', 'box.create', 'box.delete', 'box.index'],
             'children' => [
                 [
                     'label' => __('Todas las cajas'),
@@ -266,7 +266,7 @@ class AdminMenuService
             'id' => 'tipo-monedas-submenu',
             'active' => Route::is('admin.type-coins.*'),
             'priority' => 40,
-            //'permissions' => ['pulse.view', 'actionlog.view'],
+            'permissions' => ['type-coins.view', 'type-coins.edit', 'type-coins.create', 'type-coins.delete', 'type-coins.index'],
             'children' => [
                 [
                     'label' => __('Todas las monedas'),
@@ -289,21 +289,21 @@ class AdminMenuService
             'id' => 'clients-submenu',
             'active' => Route::is('admin.suppliers.*'),
             'priority' => 45,
-            //'permissions' => ['user.create', 'user.view', 'user.edit', 'user.delete'],
+            'permissions' => ['suppliers.view', 'suppliers.edit', 'suppliers.create', 'suppliers.delete', 'suppliers.index'],
             'children' => [
                 [
                     'label' => __('Proveedores'),
                     'route' => route('admin.suppliers.index'),
                     'active' => Route::is('admin.suppliers.index') || Route::is('admin.suppliers.edit'),
                     'priority' => 20,
-                    //'permissions' => 'user.view'
+                    'permissions' => 'suppliers.index'
                 ],
                 [
                     'label' => __('Nuevo proveedor'),
                     'route' => route('admin.suppliers.create'),
                     'active' => Route::is('admin.suppliers.create'),
                     'priority' => 10,
-                    //'permissions' => 'user.create'
+                    'permissions' => 'suppliers.create'
                 ]
             ]
         ]);
@@ -314,21 +314,21 @@ class AdminMenuService
             'id' => 'clients-submenu',
             'active' => Route::is('admin.clients.*'),
             'priority' => 45,
-            //'permissions' => ['user.create', 'user.view', 'user.edit', 'user.delete'],
+            'permissions' => ['client.create', 'client.view', 'client.edit', 'client.delete', 'client.index'],
             'children' => [
                 [
                     'label' => __('Clientes'),
                     'route' => route('admin.clients.index'),
                     'active' => Route::is('admin.clients.index') || Route::is('admin.clients.edit'),
                     'priority' => 20,
-                    //'permissions' => 'user.view'
+                    'permissions' => 'client.index'
                 ],
                 [
                     'label' => __('Nuevo cliente'),
                     'route' => route('admin.clients.create'),
                     'active' => Route::is('admin.clients.create'),
                     'priority' => 10,
-                    //'permissions' => 'user.create'
+                    'permissions' => 'client.create'
                 ]
             ]
         ]);

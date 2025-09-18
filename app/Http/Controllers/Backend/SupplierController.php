@@ -69,6 +69,13 @@ class SupplierController extends Controller
         // Logic to update a specific supplier
         $supplier = Supplier::findOrFail($id);
         $supplier->update($data);
-        return redirect()->route('admin.suppliers.index')->with('success', 'Supplier updated successfully.');
+        return redirect()->route('admin.suppliers.index')->with('success', 'Se ha modificado la información del proveedor.');
+    }
+
+    public function destroy($id)
+    {
+        $supplier = Supplier::findOrFail($id);
+        $supplier->delete();
+        return redirect()->route('admin.suppliers.index')->with('success', 'El proveedor ha sido eliminado correctamente.');
     }
 }

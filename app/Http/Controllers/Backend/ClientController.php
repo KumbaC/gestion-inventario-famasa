@@ -70,7 +70,7 @@ class ClientController extends Controller
 
         $client->update($data);
 
-        return redirect()->route('clients.index')->with('success', 'Cliente actualizado exitosamente.');
+        return redirect()->route('admin.clients.index')->with('success', 'Cliente actualizado exitosamente.');
     }
     
     public function destroy($id)
@@ -79,7 +79,7 @@ class ClientController extends Controller
         $client = Client::findOrFail($id);
         $client->delete();
 
-        return redirect()->route('clients.index')->with('success', 'Cliente eliminado exitosamente.');
+        return redirect()->route('admin.clients.index')->with('success', 'Cliente eliminado exitosamente.');
     }
 
 }

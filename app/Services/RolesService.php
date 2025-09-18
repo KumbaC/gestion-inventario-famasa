@@ -204,16 +204,7 @@ class RolesService
         $roles['superadmin'] = $this->createRole('Superadmin', $allPermissionNames);
 
         // 2. Admin role - has almost all permissions except some critical ones
-        $adminPermissions = $allPermissionNames;
-        $adminExcludedPermissions = [
-            'user.delete', // Cannot delete users
-        ];
-
-        $adminPermissions = array_diff($adminPermissions, $adminExcludedPermissions);
-        $roles['admin'] = $this->createRole('Admin', $adminPermissions);
-
-        // 3. Editor role - can manage content but not users/settings
-        $editorPermissions = [
+        $adminPermissions = [
             'dashboard.view',
             // Sales permissions
             'sales.index',
@@ -262,11 +253,42 @@ class RolesService
             'box.edit',
             'box.delete',
 
+            // Settings
+            'settings.view',
+            'settings.edit',
+
             // Translations
             'translations.view',
         ];
+        $adminExcludedPermissions = [
+            'user.delete', // Cannot delete users
+        ];
 
-        $roles['editor'] = $this->createRole('Editor', $editorPermissions);
+        $adminPermissions = array_diff($adminPermissions, $adminExcludedPermissions);
+        $roles['admin'] = $this->createRole('Admin', $adminPermissions);
+
+        // 3. Editor role - can manage content but not users/settings
+        $editorPermissions = [
+            'dashboard.view',
+            'profile.view',
+            'profile.edit',
+            'profile.update',
+
+            // Client permissions
+            'client.index',
+            'client.create',
+            'client.view',
+            'client.edit',
+
+            // Sales permissions
+            'sales.index',
+            'sales.create',
+            'sales.view',
+            'sales.edit',
+            'sales.delete',
+        ];
+
+        $roles['Cajero'] = $this->createRole('Cajero', $editorPermissions);
 
         // 4. Subscriber role - basic user role
         $subscriberPermissions = [
@@ -274,9 +296,65 @@ class RolesService
             'profile.view',
             'profile.edit',
             'profile.update',
+
+            // Inventories permissions
+            'inventories.index',
+            'inventories.create',
+            'inventories.view',
+            'inventories.edit',
+            'inventories.delete',
+
+            // suppliers permissions
+            'suppliers.index',
+            'suppliers.create',
+            'suppliers.view',
+            'suppliers.edit',
+            'suppliers.delete', 
+
+
         ];
 
-        $roles['subscriber'] = $this->createRole('Subscriber', $subscriberPermissions);
+        $roles['Control de Inventario'] = $this->createRole('Control de Inventario', $subscriberPermissions);
+
+
+         // 5. Supervisor - basic user role
+        $subscriberPermissions = [
+            'dashboard.view',
+            'profile.view',
+            'profile.edit',
+            'profile.update',
+
+            // Inventories permissions
+            'inventories.index',
+            'inventories.create',
+            'inventories.view',
+            'inventories.edit',
+            'inventories.delete',
+
+            // suppliers permissions
+            'suppliers.index',
+            'suppliers.create',
+            'suppliers.view',
+            'suppliers.edit',
+            'suppliers.delete', 
+
+             // Client permissions
+            'client.index',
+            'client.create',
+            'client.view',
+            'client.edit',
+
+            // Sales permissions
+            'sales.index',
+            'sales.create',
+            'sales.view',
+            'sales.edit',
+            'sales.delete',
+
+
+        ];
+
+        $roles['supervisor'] = $this->createRole('Supervisor', $subscriberPermissions);
 
         return $roles;
     }
@@ -315,7 +393,7 @@ class RolesService
                 }
                 return array_diff($allPermissionNames, $adminExcludedPermissions);
 
-            case 'editor':
+            case 'Cajero':
                 return [
                     'dashboard.view',
                     'blog.create',
@@ -333,7 +411,25 @@ class RolesService
                     'term.create',
                 ];
 
-            case 'subscriber':
+                case 'supervisor':
+                return [
+                    'dashboard.view',
+                    'blog.create',
+                    'blog.view',
+                    'blog.edit',
+                    'profile.view',
+                    'profile.edit',
+                    'profile.update',
+                    'translations.view',
+                    // Add post and term related permissions for Editor
+                    'post.create',
+                    'post.view',
+                    'post.edit',
+                    'term.view',
+                    'term.create',
+                ];
+
+            case 'Control de Inventario':
             default:
                 return [
                     'dashboard.view',

@@ -94,6 +94,7 @@
                                 <label for="amount_foreign_currency" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{ __('Monto de tipo de cambio') }}</label>
                                 <input type="text" name="amount_foreign_currency" id="amount_foreign_currency" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300" required>
                             </div>
+                            <input type="hidden" name="return_change" id="return_change" value="0">
                             <span id="amount_message" class=""></span>
                             
                             {{-- <div>
@@ -157,6 +158,7 @@
                     document.getElementById('amount_message').innerHTML = '<span class="text-red-500">Monto insuficiente</span>';
                 } else if (parseFloat(changeAmount.value) > totalAmount) {
                     document.getElementById('amount_message').innerHTML = '<span class="text-warning-500">Vuelto restante: ' + (parseFloat(changeAmount.value) - totalAmount).toFixed(2) + ' USD </span>';
+                    document.getElementById('return_change').value = (parseFloat(changeAmount.value) - totalAmount).toFixed(2);
                 } else {
                     document.getElementById('amount_message').innerHTML = '<span class="text-red-500">Monto incorrecto</span>';
                 }
@@ -172,6 +174,7 @@
                         document.getElementById('amount_message').innerHTML = '<span class="text-red-500">Monto insuficiente, falta: ' + (totalAmount - parseFloat(changeAmount.value)).toFixed(2) + ' USD</span>';
                     } else if (parseFloat(changeAmount.value) > totalAmount) {
                         document.getElementById('amount_message').innerHTML = '<span class="text-warning-500">Vuelto restante: ' + (parseFloat(changeAmount.value) - totalAmount).toFixed(2) + ' USD </span>';
+                        document.getElementById('return_change').value = (parseFloat(changeAmount.value) - totalAmount).toFixed(2);
                     } else {
                         document.getElementById('amount_message').innerHTML = '<span class="text-red-500">Monto incorrecto</span>';
                     }

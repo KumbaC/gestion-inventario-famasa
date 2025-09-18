@@ -47,7 +47,7 @@ class RolesController extends Controller
             'all_permissions' => $this->permissionService->getAllPermissionModels(),
             'permission_groups' => $this->permissionService->getDatabasePermissionGroups(),
             'breadcrumbs' => [
-                'title' => __('New Role'),
+                'title' => __('Nuevo Rol'),
                 'items' => [
                     [
                         'label' => __('Roles'),
@@ -62,7 +62,7 @@ class RolesController extends Controller
     {
         $role = $this->rolesService->createRole($request->name, $request->input('permissions', []));
 
-        session()->flash('success', __('Role has been created.'));
+        session()->flash('success', __('El rol ha sido creado.'));
 
         $this->storeActionLog(ActionType::CREATED, ['role' => $role]);
 
@@ -75,7 +75,7 @@ class RolesController extends Controller
 
         $role = $this->rolesService->findRoleById($id);
         if (!$role) {
-            session()->flash('error', __('Role not found.'));
+            session()->flash('error', __('El rol no fue encontrado.'));
 
             return back();
         }
@@ -86,7 +86,7 @@ class RolesController extends Controller
             'all_permissions' => $this->permissionService->getAllPermissionModels(),
             'permission_groups' => $this->permissionService->getDatabasePermissionGroups(),
             'breadcrumbs' => [
-                'title' => __('Edit Role'),
+                'title' => __('Editar Rol'),
                 'items' => [
                     [
                         'label' => __('Roles'),
@@ -102,7 +102,7 @@ class RolesController extends Controller
         $role = $this->rolesService->findRoleById($id);
 
         if (!$role) {
-            session()->flash('error', __('Role not found.'));
+            session()->flash('error', __('El rol no fue encontrado.'));
             return back();
         }
 
@@ -110,7 +110,7 @@ class RolesController extends Controller
 
         $role = $this->rolesService->updateRole($role, $request->name, $request->input('permissions', []));
 
-        session()->flash('success', __('Role has been updated.'));
+        session()->flash('success', __('El rol ha sido actualizado.'));
         $this->storeActionLog(ActionType::UPDATED, ['role' => $role]);
 
         return back();
@@ -123,7 +123,7 @@ class RolesController extends Controller
         $role = $this->rolesService->findRoleById($id);
 
         if (!$role) {
-            session()->flash('error', __('Role not found.'));
+            session()->flash('error', __('El rol no fue encontrado.'));
             return back();
         }
 
@@ -131,7 +131,7 @@ class RolesController extends Controller
 
         $this->rolesService->deleteRole($role);
         $this->storeActionLog(ActionType::DELETED, ['role' => $role]);
-        session()->flash('success', __('Role has been deleted.'));
+        session()->flash('success', __('El rol ha sido eliminado.'));
 
         return redirect()->route('admin.roles.index');
     }
@@ -147,7 +147,7 @@ class RolesController extends Controller
         
         if (empty($ids)) {
             return redirect()->route('admin.roles.index')
-                ->with('error', __('No roles selected for deletion'));
+                ->with('error', __('No se seleccionaron roles para eliminar.'));
         }
         
         $deletedCount = 0;
@@ -171,9 +171,9 @@ class RolesController extends Controller
         }
         
         if ($deletedCount > 0) {
-            session()->flash('success', __(':count roles deleted successfully', ['count' => $deletedCount]));
+            session()->flash('success', __(':count roles han sido eliminados con éxito.', ['count' => $deletedCount]));
         } else {
-            session()->flash('error', __('No roles were deleted. Selected roles may include protected roles.'));
+            session()->flash('error', __('No eligieron roles para eliminar o no se pudieron eliminar.'));
         }
         
         return redirect()->route('admin.roles.index');

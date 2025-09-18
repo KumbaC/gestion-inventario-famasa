@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Enums\ActionType;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -18,11 +19,12 @@ class ProfilesController extends Controller
         $this->checkAuthorization(auth()->user(), ['profile.edit'], true);
 
         $user = Auth::user();
+        $roleName = $user->roles->pluck('name')->first(); // Obtiene el nombre del primer rol del usuario
 
-        return view('backend.pages.profile.edit', compact('user'))
+        return view('backend.pages.profile.edit', compact('user', 'roleName'))
             ->with([
                 'breadcrumbs' => [
-                    'title' => __('Edit Profile'),
+                    'title' => __('Editar Perfil'),
                 ],
             ]);
     }
@@ -52,7 +54,7 @@ class ProfilesController extends Controller
 
         ld_do_action('user_profile_update_after', $user);
 
-        session()->flash('success', 'Profile updated successfully.');
+        session()->flash('success', 'Perfil actualizado correctamente.');
 
         $this->storeActionLog(ActionType::UPDATED, ['profile' => $user]);
 

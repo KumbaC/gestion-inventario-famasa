@@ -13,10 +13,10 @@
     <div class="space-y-6">
         <div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
             <div class="px-5 py-4 sm:px-6 sm:py-5 flex justify-between items-center">
-                <h3 class="text-base font-medium text-gray-800 dark:text-white/90">{{ __('Permissions') }}</h3>
+                <h3 class="text-base font-medium text-gray-800 dark:text-white/90">{{ __('Permisos') }}</h3>
 
                 @include('backend.partials.search-form', [
-                    'placeholder' => __('Search by name or group'),
+                    'placeholder' => __('Buscar por nombre o grupo de permisos...'),
                 ])
             </div>
             <div class="space-y-3 border-t border-gray-100 dark:border-gray-800 overflow-x-auto overflow-y-visible">
@@ -26,7 +26,7 @@
                             <th width="5%" class="p-2 bg-gray-50 dark:bg-gray-800 dark:text-white text-left px-5">{{ __('Sl') }}</th>
                             <th width="20%" class="p-2 bg-gray-50 dark:bg-gray-800 dark:text-white text-left px-5">
                                 <div class="flex items-center">
-                                    {{ __('Name') }}
+                                    {{ __('Nombre') }}
                                     <a href="{{ request()->fullUrlWithQuery(['sort' => request()->sort === 'name' ? '-name' : 'name']) }}" class="ml-1">
                                         @if(request()->sort === 'name')
                                             <i class="bi bi-sort-alpha-down text-primary"></i>
@@ -40,7 +40,7 @@
                             </th>
                             <th width="15%" class="p-2 bg-gray-50 dark:bg-gray-800 dark:text-white text-left px-5">
                                 <div class="flex items-center">
-                                    {{ __('Group') }}
+                                    {{ __('Grupo') }}
                                     <a href="{{ request()->fullUrlWithQuery(['sort' => request()->sort === 'group_name' ? '-group_name' : 'group_name']) }}" class="ml-1">
                                         @if(request()->sort === 'group_name')
                                             <i class="bi bi-sort-alpha-down text-primary"></i>
@@ -66,7 +66,7 @@
                                     </a>
                                 </div>
                             </th>
-                            <th width="10%" class="p-2 bg-gray-50 dark:bg-gray-800 dark:text-white">{{ __('Action') }}</th>
+                            <th width="10%" class="p-2 bg-gray-50 dark:bg-gray-800 dark:text-white">{{ __('Acciones') }}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -92,15 +92,15 @@
                                             </a>
                                         </div>
                                     @else
-                                        <span class="text-gray-400">{{ __('No roles assigned') }}</span>
+                                        <span class="text-gray-400">{{ __('No hay roles asignados') }}</span>
                                     @endif
                                 </td>
                                 <td class="px-5 py-4 sm:px-6 flex justify-center">
-                                    <x-buttons.action-buttons :label="__('Actions')" :show-label="false" align="right">
+                                    <x-buttons.action-buttons :label="__('Acciones')" :show-label="false" align="right">
                                         <x-buttons.action-item 
                                             :href="route('admin.permissions.show', $permission->id)" 
                                             icon="eye" 
-                                            :label="__('View Details')" 
+                                            :label="__('Ver detalles')" 
                                         />
                                     </x-buttons.action-buttons>
                                 </td>
@@ -108,7 +108,7 @@
                         @empty
                             <tr class="border-b border-gray-100 dark:border-gray-800">
                                 <td colspan="5" class="px-5 py-4 sm:px-6 text-center">
-                                    <span class="text-gray-500 dark:text-gray-400">{{ __('No permissions found') }}</span>
+                                    <span class="text-gray-500 dark:text-gray-400">{{ __('No se encontraron permisos') }}</span>
                                 </td>
                             </tr>
                         @endforelse

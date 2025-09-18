@@ -54,7 +54,7 @@ class BoxController extends Controller
         $box ->user_id      = Auth::user()->id;
         $box->save();
 
-        return redirect()->route('admin.box.index')->with('success', 'Box created successfully.');
+        return redirect()->route('admin.box.index')->with('success', 'La caja ha sido creada correctamente.');
     }
    
 
@@ -82,7 +82,7 @@ class BoxController extends Controller
 
         $box->update($data);
 
-        return redirect()->route('admin.box.index')->with('success', 'Box updated successfully.');
+        return redirect()->route('admin.box.index')->with('success', 'La caja ha sido actualizada correctamente.');
     }
 
     public function destroy($id)
@@ -91,7 +91,7 @@ class BoxController extends Controller
         $box = Box::findOrFail($id);
         $box->delete();
 
-        return redirect()->route('admin.box.index')->with('success', 'Box deleted successfully.');
+        return redirect()->route('admin.box.index')->with('success', 'La caja ha sido eliminada correctamente.');
     }
 
 }
