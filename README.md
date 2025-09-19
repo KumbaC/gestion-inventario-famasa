@@ -85,7 +85,7 @@ npm run dev
 1. Menú de administración: agregar/editar/eliminar menú, submenú, enlaces
 1. Suplantación de administrador: iniciar sesión como otro usuario y volver a tu cuenta original
 1. Páginas de error personalizadas: 404, 500, 503, 403
-1. Sistema de gestión de inventario: agregar/editar/eliminar productos/articulos, ventas, proveedores, clientes, cajas y tipos de monedas. 
+1. Sistema de gestión de inventario: agregar/editar/eliminar productos/articulos, ventas, proveedores, inventario, clientes, cajas y tipos de monedas. 
 
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
