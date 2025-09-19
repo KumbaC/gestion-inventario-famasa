@@ -1,10 +1,6 @@
 <a id="readme-top"></a>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![Unlicense License][license-shield]][license-url]
+
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <img width="100%" alt="Lara Dashboard" src="public/images/logo/1000236470.png" />
@@ -28,46 +24,13 @@ password - 12345678
 
 
 
-<details>
-<summary>View Old versions</summary>
-
-- Laravel `7.x` & PHP -`7.x`
-    - Tag - https://github.com/ManiruzzamanAkash/laravel-role/releases/tag/Laravel7.x
-    - Branch - https://github.com/ManiruzzamanAkash/laravel-role/tree/Laravel7.x
-
-- Laravel `9.7` & PHP - `8.x`
-    - Tag - https://github.com/ManiruzzamanAkash/laravel-role/releases/tag/Laravel9.x
-
-- Laravel `11.x`
-    - Tag - https://github.com/ManiruzzamanAkash/laravel-role/releases/tag/v11.x-main
-
-- Laravel `12.x` & PHP >= `8.3`
-    - Tag - https://github.com/ManiruzzamanAkash/laravel-role/releases/tag/Laravel12.x
-
-- Laravel `12.x` & Tail Admin Template Integration
-    - Tag - https://github.com/ManiruzzamanAkash/laravel-role/releases/tag/Laravel12.x-tailadmin
-
-- Laravel `12.x` & Module & Action Log integration
-    - Tag - https://github.com/ManiruzzamanAkash/laravel-role/releases/tag/Laravel12.x-module-logs
-
-- v1.0.0 - Settings, Forget password and lots of refactorring
-    - Tag - https://github.com/ManiruzzamanAkash/laravel-role/releases/tag/v1.0.0
-- v1.2.0 - Translation Management, Dashboard Redesign, Role/User List improvements
-    - Tag - https://github.com/ManiruzzamanAkash/laravel-role/releases/tag/v1.2.0
-- v1.3.0 - Admin Menu architecture, Permission List and detail page
-    - Tag - https://github.com/ManiruzzamanAkash/laravel-role/releases/tag/v1.3.0
-
-More release tags - https://github.com/laradashboard/laradashboard/releases
-</details>
-
-
-<p align="right">(<a href="#readme-top">volver arriba</a>)</p>
+<p align="right">(<a href="#readme-top">Volver arriba</a>)</p>
 
 ## 🚀 Configuración del Proyecto
 **Clonar y ejecutar el proyecto**
 ```console
-git clone git@github.com:laradashboard/laradashboard.git
-cd laradashboard
+git clone git@github.com:KumbaC/gestion-inventario-famasa.git
+cd gestion-inventario-famasa
 ```
 
 **Instalar dependencias de Composer y Node**
@@ -77,7 +40,7 @@ npm install
 ```
 
 **Base de datos y creación de archivo env**
-- Crea una base de datos llamada `laradashboard`
+- Crea una base de datos llamada `inventario_famasa`
 - Crea el archivo `.env` copiando el archivo `.env.example`
 
 **Generar clave de Artisan y enlaces necesarios**
@@ -99,7 +62,7 @@ npm run dev
 
 ¡Listo! Ahora esta desplegado el proyecto en tu local - http://localhost:8000
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">Volver arriba</a>)</p>
 
 ## ⚙️ Cómo funciona
 
