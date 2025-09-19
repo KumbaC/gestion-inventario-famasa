@@ -62,7 +62,7 @@ npm run dev
 
 ¡Listo! Ahora esta desplegado el proyecto en tu local - http://localhost:8000
 
-<p align="right">(<a href="#readme-top">Volver arriba</a>)</p>
+<p align="right"><a href="#readme-top">Volver arriba</a></p>
 
 ## ⚙️ Cómo funciona
 
