@@ -5,7 +5,7 @@
 
 <img width="100%" alt="Lara Dashboard" src="public/images/logo/1000236470.png" />
 
-**⚡ Sistema Gestor de Inventario** CMS desarrollado en Laravel (7.x - 12.x) — Administra Usuarios, Roles, Permisos, Módulos, Configuraciones, Traducciones, Control de inventario: (Ventas, Inventario, Proveedores, Usuarios, Cajas, Tipos de monedas), registros del sistema, monitoreo y todas las acciones de tu aplicación Laravel. Es una solución CMS completa para aplicaciones Laravel, integrada con Tailwind CSS y todas las funcionalidades iniciales: módulos, modo oscuro/luz, gráficos, tablas, formularios, numerosos componentes y mucho más. Con nuestros módulos premium puedes obtener funcionalidades adicionales como CRM, HRM, gestión de cursos, entre otros.
+**⚡ Sistema Gestor de Inventario** CMS desarrollado en Laravel (12) — Administra Usuarios, Roles, Permisos, Módulos, Configuraciones, Traducciones, Control de inventario: (Ventas, Inventario, Proveedores, Usuarios, Cajas, Tipos de monedas), registros del sistema, monitoreo y todas las acciones de tu aplicación Laravel. Es una solución CMS completa para negocios y empresas tipo comercio, integrada con Tailwind CSS y todas las funcionalidades iniciales: módulos, modo oscuro/luz, gráficos, tablas, formularios, numerosos componentes y mucho más. Con nuestros módulos premium puedes obtener funcionalidades adicionales como CRM, HRM, gestión de cursos, entre otros.
 
 Este proyecto fue realizado para cumplir con una propuesta presentada a Inversiones Famasa C.A. y para completar los requisitos exigidos para optar al título de Licenciado en Computación en la Universidad del Zulia.
 
@@ -24,7 +24,7 @@ password - 12345678
 
 
 
-<p align="right">(<a href="#readme-top">Volver arriba</a>)</p>
+<p align="right"><a href="#readme-top">Volver arriba</a></p>
 
 ## 🚀 Configuración del Proyecto
 **Clonar y ejecutar el proyecto**
