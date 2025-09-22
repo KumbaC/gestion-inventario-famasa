@@ -55,13 +55,13 @@
                                                         </span>
                                                     </li>
                                                 @endforeach
-                                                @if($sale->inventories->count() > 3)
+                                        
                                                     <li>
                                                         <a href="{{ route('admin.sales.show', $sale->id) }}" class="text-blue-600 hover:underline">
-                                                            <span class="text-gray-500">+{{ $sale->inventories->count() - 4 }} más</span>
+                                                            <span class="text-gray-500">Ver más</span>
                                                         </a>
                                                     </li>
-                                                @endif
+                        
                                             </ul>
                                         @else
                                             <span class="text-gray-400">Sin productos</span>
