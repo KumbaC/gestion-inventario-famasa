@@ -46,7 +46,7 @@
                             @foreach ($box as $boxes)
                                 <tr>
                                     <td class="border px-4 py-2">{{ $boxes->name }}</td>
-                                    <td class="border px-4 py-2">{{ $boxes->amount }}</td>
+                                    <td class="border px-4 py-2">{{ number_format($boxes->amount, 2) }}</td>
                                     <td class="border px-4 py-2">{{ $boxes->typeCoin->name }}</td>
                                     <td class="border px-4 py-2">{{ $boxes->user->name }}</td>
                                     <td class="border px-4 py-2">

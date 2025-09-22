@@ -5,8 +5,9 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use App\Models\Box; // Assuming Box is the model for the box data
-use App\Models\Type_coin; // Assuming Type_coin is the model for type coins
+use App\Models\Box;
+use App\Models\Type_coin; 
+use App\Models\Sale;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -87,10 +88,14 @@ class BoxController extends Controller
 
     public function destroy($id)
     {
-        // Logic to delete a specific box
         $box = Box::findOrFail($id);
-        $box->delete();
+        $sales = Sale::where('box_id', $box->id)->get();
+        
+        if ($sales->count() > 0) {
+            return redirect()->route('admin.box.index')->with('error', 'No se puede eliminar la caja porque hay ventas asociadas a ella.');
+        }
 
+        $box->delete();
         return redirect()->route('admin.box.index')->with('success', 'La caja ha sido eliminada correctamente.');
     }
 

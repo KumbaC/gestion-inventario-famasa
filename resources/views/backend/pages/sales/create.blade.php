@@ -77,14 +77,7 @@
                                     @endforeach
                                 </select>
                             </div>
-                                
-                            <div class="col-span-2">
-                                <label for="amount" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{ __('Total a pagar') }}</label>
-                                <input type="text" name="amount" id="monto" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300" required>
-                            </div>
-                            
-                            
-                            
+
                             <div>
                                 <label for="exchange_rate" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{ __('Tipo de cambio') }}</label>
                                 <input type="text" name="exchange_rate" id="exchange_rate" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300" required>
@@ -94,17 +87,16 @@
                                 <label for="amount_foreign_currency" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{ __('Monto de tipo de cambio') }}</label>
                                 <input type="text" name="amount_foreign_currency" id="amount_foreign_currency" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300" required>
                             </div>
+                            
                             <input type="hidden" name="return_change" id="return_change" value="0">
-                            <span id="amount_message" class=""></span>
                             
-                            {{-- <div>
-                                <label for="amount_foreign_currency" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{ __('Monto de moneda extranjera') }}</label>
-                                <input type="text" name="amount_foreign_currency" id="amount_foreign_currency" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300" required>
-                            </div> --}}
-
+                                
+                            <div class="col-span-2">
+                                <label for="amount" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{ __('Total a pagar') }}</label>
+                                <input type="text" name="amount" id="monto" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300" required>
+                                <span id="amount_message" class=""></span>
+                            </div>
                             
-                            
-
                              
                         <div class="mt-6">
                             <button type="submit" class="btn-primary">{{ __('Guardar') }}</button>
@@ -135,21 +127,22 @@
             amountTotal.value = total.toFixed(2) + ' USD';
         }
 
-        function validateAmount() {
-        let totalAmount = 0;
-        productInputs.forEach(input => {
-            const id = input.name.match(/\d+/)[0];
-            const product = productsData.find(p => p.id == id);
-            const qty = parseInt(input.value) || 0;
-            if (product && qty > 0) {
-                totalAmount += qty * parseFloat(product.amount);
-            }
-        });
+            function validateAmount() {
+            let totalAmount = 0;
+            productInputs.forEach(input => {
+                const id = input.name.match(/\d+/)[0];
+                const product = productsData.find(p => p.id == id);
+                const qty = parseInt(input.value) || 0;
+                if (product && qty > 0) {
+                    totalAmount += qty * parseFloat(product.amount);
+                }
+            });
 
             let amountExchangeRate = document.getElementById('exchange_rate').value;
             let amountForeignCurrency = document.getElementById('amount_foreign_currency').value;
             let changeAmount = document.getElementById('monto');
             let typeCoinId = document.getElementById('type_coin_id').value;
+            let amount_total = document.getElementById('amount_total').value;
 
             if (typeCoinId == 1) {
                 if (parseFloat(changeAmount.value) === totalAmount) {
@@ -158,6 +151,12 @@
                     document.getElementById('amount_message').innerHTML = '<span class="text-red-500">Monto insuficiente</span>';
                 } else if (parseFloat(changeAmount.value) > totalAmount) {
                     document.getElementById('amount_message').innerHTML = '<span class="text-warning-500">Vuelto restante: ' + (parseFloat(changeAmount.value) - totalAmount).toFixed(2) + ' USD </span>';
+                    if(changeAmount.value == amount_total.value){
+                        document.getElementById('return_change').value = 0;
+                    }
+                    else{
+                        document.getElementById('return_change').value = (parseFloat(changeAmount.value) - totalAmount).toFixed(2);
+                    }
                     document.getElementById('return_change').value = (parseFloat(changeAmount.value) - totalAmount).toFixed(2);
                 } else {
                     document.getElementById('amount_message').innerHTML = '<span class="text-red-500">Monto incorrecto</span>';
@@ -174,7 +173,12 @@
                         document.getElementById('amount_message').innerHTML = '<span class="text-red-500">Monto insuficiente, falta: ' + (totalAmount - parseFloat(changeAmount.value)).toFixed(2) + ' USD</span>';
                     } else if (parseFloat(changeAmount.value) > totalAmount) {
                         document.getElementById('amount_message').innerHTML = '<span class="text-warning-500">Vuelto restante: ' + (parseFloat(changeAmount.value) - totalAmount).toFixed(2) + ' USD </span>';
-                        document.getElementById('return_change').value = (parseFloat(changeAmount.value) - totalAmount).toFixed(2);
+                        if(changeAmount.value == amount_total.value){
+                            document.getElementById('return_change').value = 0;
+                        }
+                        else{
+                            document.getElementById('return_change').value = (parseFloat(changeAmount.value) - totalAmount).toFixed(2);
+                        }
                     } else {
                         document.getElementById('amount_message').innerHTML = '<span class="text-red-500">Monto incorrecto</span>';
                     }
